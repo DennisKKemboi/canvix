@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { Bot, Loader2, Plus, Send, Sparkles, User, Wand2 } from 'lucide-react'
+import { Bot, Loader2, Plus, Send, User, Wand2 } from 'lucide-react'
 import type { AnyElement, TextElement } from '@/lib/types'
 import { useEditorStore } from '@/store/editor-store'
 import { AppHeader, type AppPanelProps } from './registry'
@@ -145,7 +145,7 @@ export function AssistantApp({ onClose }: AppPanelProps) {
         {empty && (
           <div className="h-full flex flex-col items-center justify-center gap-3 text-center px-3">
             <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#7630D7] to-[#02C0CC] flex items-center justify-center shadow-lg">
-              <Sparkles size={20} className="text-white" />
+              <Bot size={20} className="text-white" />
             </div>
             <p className="text-[13px] font-bold text-white">Your design-aware copilot</p>
             <p className="text-[11px] text-white/50 leading-snug">

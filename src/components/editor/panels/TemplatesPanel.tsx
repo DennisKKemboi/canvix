@@ -1,7 +1,7 @@
 'use client'
 
 import { memo, useEffect, useMemo, useRef, useState } from 'react'
-import { Search, Sparkles, Clock, X, Check, Gem, BadgeCheck, BookMarked, Trash2, Braces } from 'lucide-react'
+import { Search, Star, Clock, X, Check, Gem, BadgeCheck, BookMarked, Trash2, Braces } from 'lucide-react'
 import { TEMPLATES, type TemplateDef } from '@/lib/templates'
 import { fillTemplateFields } from '@/lib/templates/fields'
 import { useEditorStore } from '@/store/editor-store'
@@ -183,7 +183,7 @@ export function TemplatesPanel() {
             )}
             {hasPremiumSection ? (
               <>
-            <SectionLabel icon={<Sparkles size={11} />}>Recommended for you</SectionLabel>
+            <SectionLabel icon={<Star size={11} />}>Recommended for you</SectionLabel>
             <div className="grid grid-cols-2 gap-3 mb-5">
               {recommended.map((t) => (
                 <TemplateCard key={t.slug} t={t} onApply={() => use(t)} onPreview={() => setPreview(t)} />

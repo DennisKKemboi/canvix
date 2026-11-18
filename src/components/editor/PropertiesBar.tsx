@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import {
   Bold, Italic, Underline, Strikethrough, CaseUpper, AlignLeft, AlignCenter, AlignRight,
-  AlignJustify, Minus, Plus, LetterText, Percent, Sparkles, Move, CopyPlus, Trash2,
+  AlignJustify, Minus, Plus, LetterText, Percent, Move, CopyPlus, Trash2,
   Group, Ungroup, ArrowUpToLine, ArrowDownToLine, BringToFront, SendToBack,
   AlignVerticalJustifyStart, AlignVerticalJustifyCenter, AlignVerticalJustifyEnd,
   AlignHorizontalJustifyStart, AlignHorizontalJustifyCenter, AlignHorizontalJustifyEnd,
@@ -293,7 +293,7 @@ export function ContextToolbar({ variant = 'topbar' }: { variant?: 'topbar' | 'm
           {/* effects */}
           <ToolbarPopover width={264} trigger={(open) => (
             <button className="cv-tbtn gap-1 !px-2.5" data-active={open} aria-label="Effects" title="Effects">
-              <Sparkles size={14} /> <span className="text-[12px] hidden lg:inline">Effects</span>
+              <SlidersHorizontal size={14} /> <span className="text-[12px] hidden lg:inline">Effects</span>
             </button>
           )}>
             <div className="text-[12px] font-bold text-white/90 mb-2">Text effects</div>

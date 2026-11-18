@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Sparkles, Loader2, Plus, RefreshCw, Wand2 } from 'lucide-react'
+import { Type as TypeIcon, Loader2, Plus, RefreshCw, Wand2 } from 'lucide-react'
 import { createTextElement } from '@/lib/types'
 import { placement } from '../add-element'
 import { useEditorStore } from '@/store/editor-store'
@@ -132,7 +132,7 @@ export function MagicWriteApp({ onClose }: AppPanelProps) {
         className="w-full h-10 rounded-xl bg-gradient-to-r from-[#7630D7] to-[#9B6BFF] text-white text-[13px] font-bold flex items-center justify-center gap-2 disabled:opacity-40 hover:brightness-110 transition-all"
         aria-label="Generate copy"
       >
-        {busy ? <Loader2 size={14} className="animate-spin" /> : <Sparkles size={14} />}
+        {busy ? <Loader2 size={14} className="animate-spin" /> : <TypeIcon size={14} />}
         {busy ? 'Writing…' : 'Generate 3 options'}
       </button>
 

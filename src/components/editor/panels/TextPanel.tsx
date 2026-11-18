@@ -1,6 +1,6 @@
 'use client'
 
-import { Heading1, Heading2, Type as TypeIcon, Plus, Sparkles, BookMarked } from 'lucide-react'
+import { Heading1, Heading2, Type as TypeIcon, Plus, BookMarked } from 'lucide-react'
 import { addText, addTextStyled } from '../add-element'
 import { FONT_STYLES } from '@/lib/editor-utils'
 import { useEditorStore } from '@/store/editor-store'
@@ -26,7 +26,7 @@ export function TextPanel() {
           onClick={() => addTextStyled({ text: 'Draft magic copy with Canvix AI…', fontSize: 28, fontFamily: 'Poppins', width: 640 })}
           aria-label="Magic Write"
         >
-          <Sparkles size={13} className="text-[#02C0CC]" /> Magic Write
+          <TypeIcon size={13} className="text-[#02C0CC]" /> Magic Write
         </button>
       </div>
 

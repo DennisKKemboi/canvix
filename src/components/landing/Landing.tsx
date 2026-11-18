@@ -10,7 +10,6 @@ import {
   Download,
   Smartphone,
   Layers,
-  Sparkles,
   Palette,
   Undo2,
   Presentation,
@@ -67,7 +66,7 @@ function EditorMockup() {
               <div className="h-4 rounded bg-white/70" style={{ width: '45%' }} />
             </div>
             <div className="absolute bottom-3 left-3 h-4 w-20 rounded-full bg-[#1F2226]" />
-            <div className="absolute -bottom-2 -right-2 text-4xl">✨</div>
+            <Star className="absolute -bottom-2 -right-2 text-[#FFD166]" size={28} fill="currentColor" />
             {/* selection handles */}
             <div className="absolute inset-3 border-2 border-[#00C4CC] rounded">
               {['-top-1 -left-1', '-top-1 -right-1', '-bottom-1 -left-1', '-bottom-1 -right-1'].map((pos) => (
@@ -177,10 +176,7 @@ export function Landing() {
           <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full blur-3xl opacity-20 bg-[#7D2AE8]" aria-hidden="true" />
           <div className="absolute -bottom-40 -left-32 h-96 w-96 rounded-full blur-3xl opacity-20 bg-[#00C4CC]" aria-hidden="true" />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-16 pb-20 sm:pt-24 sm:pb-28 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-1.5 text-xs font-semibold text-[#7D2AE8] shadow-sm animate-fade-up">
-              <Sparkles size={14} /> Free forever · No account needed · MIT licensed
-            </div>
-            <h1 className="mt-6 text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] animate-fade-up delay-100">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] animate-fade-up delay-100">
               Design anything.
               <br />
               <span className="text-brand-gradient">Free for everyone.</span>

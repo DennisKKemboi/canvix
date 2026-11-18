@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ImageIcon, Loader2, Plus, RefreshCw, Sparkles } from 'lucide-react'
+import { ImageIcon, Loader2, Plus, RefreshCw } from 'lucide-react'
 import { createImageElement } from '@/lib/types'
 import { useEditorStore } from '@/store/editor-store'
 import { AppHeader, type AppPanelProps } from './registry'
@@ -150,7 +150,7 @@ export function AIImageApp({ onClose }: AppPanelProps) {
         className="w-full h-10 rounded-xl bg-gradient-to-r from-[#7630D7] to-[#9B6BFF] text-white text-[13px] font-bold flex items-center justify-center gap-2 disabled:opacity-40 hover:brightness-110 transition-all"
         aria-label="Generate image"
       >
-        {busy ? <Loader2 size={14} className="animate-spin" /> : <Sparkles size={14} />}
+        {busy ? <Loader2 size={14} className="animate-spin" /> : <ImageIcon size={14} />}
         {busy ? 'Dreaming…' : 'Generate image'}
       </button>
 

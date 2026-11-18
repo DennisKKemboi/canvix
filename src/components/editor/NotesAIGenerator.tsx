@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Loader2, NotebookPen, Sparkles } from 'lucide-react'
+import { Loader2, NotebookPen } from 'lucide-react'
 import { useEditorStore } from '@/store/editor-store'
 import { extractOutlines } from '@/lib/notes-outline'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
@@ -77,7 +77,7 @@ export function NotesAIGenerator() {
         aria-label="Generate speaker notes with AI"
         data-testid="notes-ai-generate"
       >
-        {busy ? <Loader2 size={12} className="animate-spin" /> : <Sparkles size={12} />}
+        {busy ? <Loader2 size={12} className="animate-spin" /> : <NotebookPen size={12} />}
         Generate with AI
       </button>
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { Clapperboard, Loader2, Plus, Sparkles, TriangleAlert } from 'lucide-react'
+import { Clapperboard, Loader2, Plus, TriangleAlert } from 'lucide-react'
 import { addGeneratedVideo } from '../add-element'
 import { toast } from '@/hooks/use-toast'
 
@@ -177,7 +177,7 @@ export function AIVideoCard() {
           aria-label="Generate video"
           data-testid="ai-video-generate"
         >
-          {running ? <Loader2 size={12} className="animate-spin" /> : <Sparkles size={12} />}
+          {running ? <Loader2 size={12} className="animate-spin" /> : <Clapperboard size={12} />}
           {running ? `${status?.progress ?? 0}%` : 'Generate'}
         </button>
       </div>

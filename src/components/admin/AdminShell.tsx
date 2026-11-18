@@ -3,14 +3,14 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
-import { LayoutDashboard, Users, Sparkles, Settings, ScrollText, ArrowLeft } from 'lucide-react'
+import { LayoutDashboard, Users, Bot, Settings, ScrollText, ArrowLeft } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Logo } from '@/components/logo'
 
 const NAV = [
   { href: '/admin', label: 'Overview', icon: LayoutDashboard, exact: true },
   { href: '/admin/users', label: 'Users', icon: Users, exact: false },
-  { href: '/admin/ai', label: 'AI & models', icon: Sparkles, exact: false },
+  { href: '/admin/ai', label: 'AI & models', icon: Bot, exact: false },
   { href: '/admin/logs', label: 'Logs', icon: ScrollText, exact: false },
   { href: '/admin/settings', label: 'Settings', icon: Settings, exact: false },
 ] as const

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, type ReactNode } from 'react'
-import { Search, Sparkles, Mic, X } from 'lucide-react'
+import { Search, Bot, Mic, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface PanelShellProps {
@@ -69,7 +69,7 @@ export function PanelShell({ title, subtitle, searchPlaceholder, onSearch, searc
               aria-label="Generate with AI"
               title="Generate with AI (open-source roadmap)"
             >
-              <Sparkles size={14} className="text-[#02C0CC]" /> Generate
+              <Bot size={14} className="text-[#02C0CC]" /> Generate
             </button>
             <button className="w-[104px] h-10 rounded-r-xl rounded-l-none bg-[#7630D7] hover:bg-[#8B5CF6] text-white text-[13px] font-semibold transition-colors" onClick={submit} aria-label="Search">
               Search

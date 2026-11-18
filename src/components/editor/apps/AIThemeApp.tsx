@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { SwatchBook, Loader2, Check, Sparkles } from 'lucide-react'
+import { SwatchBook, Loader2, Check } from 'lucide-react'
 import { useEditorStore } from '@/store/editor-store'
 import { applyTheme, type Theme } from '@/lib/theme'
 import { AppHeader, type AppPanelProps } from './registry'
@@ -94,7 +94,7 @@ export function AIThemeApp({ onClose }: AppPanelProps) {
           onClick={() => void generate()}
           disabled={busy || !mood.trim()}
         >
-          {busy ? <Loader2 size={13} className="animate-spin" /> : <Sparkles size={13} />}
+          {busy ? <Loader2 size={13} className="animate-spin" /> : <SwatchBook size={13} />}
           Generate
         </button>
       </div>

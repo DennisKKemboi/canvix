@@ -7,12 +7,12 @@ import {
   Eye,
   EyeOff,
   ImageIcon,
+  Info,
   Layers,
   Loader2,
   MousePointer2,
   Plus,
   RefreshCw,
-  Sparkles,
   Trash2,
   Upload,
   Wand2,
@@ -305,7 +305,7 @@ export function MagicLayersDialog({ open, onOpenChange }: { open: boolean; onOpe
 
             <div className="rounded-xl bg-white/[0.03] border border-white/[0.07] p-3.5 text-xs text-white/55 space-y-1.5">
               <div className="font-semibold text-white/75 flex items-center gap-1.5">
-                <Sparkles size={12} className="text-[#02C0CC]" /> How it works
+                <Info size={12} className="text-[#02C0CC]" /> How it works
               </div>
               <p>
                 A vision model detects text, photos, shapes and the background, then Canvix rebuilds each region as a
@@ -470,7 +470,7 @@ export function MagicLayersDialog({ open, onOpenChange }: { open: boolean; onOpe
 function RegionRow({ region, discarded, onToggle }: { region: MagicRegion; discarded: boolean; onToggle: () => void }) {
   const low = region.confidence < REVIEW_CONFIDENCE_THRESHOLD
   const icon =
-    region.type === 'text' ? 'T' : region.type === 'photo' ? <ImageIcon size={12} /> : region.type === 'shape' ? <Plus size={12} /> : <Sparkles size={12} />
+    region.type === 'text' ? 'T' : region.type === 'photo' ? <ImageIcon size={12} /> : region.type === 'shape' ? <Plus size={12} /> : <Layers size={12} />
   const label =
     region.type === 'text'
       ? (region.text ?? '').replace(/\n/g, ' ').slice(0, 44)

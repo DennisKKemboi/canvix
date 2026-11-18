@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Bot, Loader2, Check, Eye, EyeOff, Sparkles } from 'lucide-react'
+import { Bot, Loader2, Check, Eye, EyeOff } from 'lucide-react'
 import { useEditorStore } from '@/store/editor-store'
 import { planToPages, type DesignPlan, type PlanPageSpec } from '@/lib/design-plan'
 import { AppHeader, type AppPanelProps } from './registry'
@@ -147,7 +147,7 @@ export function AIPlanApp({ onClose }: AppPanelProps) {
           onClick={() => void generate()}
           disabled={busy || !prompt.trim()}
         >
-          {busy ? <Loader2 size={13} className="animate-spin" /> : <Sparkles size={13} />}
+          {busy ? <Loader2 size={13} className="animate-spin" /> : <Bot size={13} />}
           {busy ? 'Planning…' : 'Plan my design'}
         </button>
       </div>

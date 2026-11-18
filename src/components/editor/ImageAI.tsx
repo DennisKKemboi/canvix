@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Eraser, Wand2, Loader2, Sparkles, Brush, Maximize2, Accessibility, Cloud, Cpu } from 'lucide-react'
+import { Eraser, Wand2, Loader2, Brush, Maximize2, Accessibility, Cloud, Cpu } from 'lucide-react'
 import { useEditorStore } from '@/store/editor-store'
 import type { ImageElement } from '@/lib/types'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
@@ -362,7 +362,7 @@ export function MagicEraserPopover({ el }: { el: ImageElement }) {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <button className={btnBase} data-active={open} title="Magic eraser — remove unwanted objects" aria-label="Magic eraser">
-          <Sparkles size={14} />
+          <Eraser size={14} />
           <span className="text-[12px] hidden lg:inline">Magic eraser</span>
         </button>
       </PopoverTrigger>
@@ -955,7 +955,7 @@ export function AltTextPopover({ el }: { el: ImageElement }) {
             onClick={() => void generate()}
             disabled={busy}
           >
-            {busy ? <Loader2 size={13} className="animate-spin" /> : <Sparkles size={13} className="text-[#02C0CC]" />}
+            {busy ? <Loader2 size={13} className="animate-spin" /> : <Accessibility size={13} className="text-[#02C0CC]" />}
             Generate
           </Button>
           <Button className="btn-cv h-9 px-3 ml-auto text-[12px]" onClick={save}>

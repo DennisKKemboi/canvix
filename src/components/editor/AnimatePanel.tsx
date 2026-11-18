@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Sparkles, X, Zap, Play, RotateCcw, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, Volume2 } from 'lucide-react'
+import { X, Zap, Play, RotateCcw, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, Volume2 } from 'lucide-react'
 import { useEditorStore } from '@/store/editor-store'
 import { ANIMATION_KINDS, TRANSITION_KINDS } from '@/lib/animations'
 import { SFX_PACK, isSfxId } from '@/lib/assets/sfx-pack'
@@ -135,7 +135,7 @@ export function AnimatePanel({ onClose }: { onClose: () => void }) {
             >
               <div className="rounded-[11px] bg-[#16181D] px-3 py-3 flex items-center gap-2.5 group-hover:bg-transparent transition-colors">
                 <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#00C4CC] to-[#7630D7] flex items-center justify-center shrink-0">
-                  <Sparkles size={16} className="text-white" />
+                  <Zap size={16} className="text-white" />
                 </div>
                 <div className="text-left">
                   <div className="text-[13px] font-bold text-white">Magic Animate</div>
